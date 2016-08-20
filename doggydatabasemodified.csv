@@ -1,0 +1,48 @@
+FID,objectid,name,road_front,suburb,lat,long,On_Off,Details,GlobalID
+1,54,Wrights Hill,no,Karori,-41.293106,174.737967,Off leash,Off leash under control of owner,801ae149-aaa8-41f5-880b-7d469e3e5c25
+2,55,Maupuia Walkway (Old Prison Rd),yes,Maupuia,-41.302728,174.819689,Off leash,Off leash under control of owner,b349d83c-d0e4-4b61-ae88-db6dc0476add
+3,56,Karori Park,no,Karori,-41.285932,174.723918,Off leash,Off leash under control of owner,956bf334-3582-44a9-b3ae-ebc3dcef8710
+4,57,Kaiwharawhara Park,no,Kaiwharawhara,-41.254659,174.794535,Off leash with restrictions,Off leash 1 November to 31 January only.  Prohibited the rest of the year,00f1060d-9655-45f7-82ce-6cadd46e795b
+5,58,Duncan Park,no,Tawa,-41.168878,174.829095,Off leash,Off leash under control of owner,420e6caa-bd46-43a8-b66d-531d51a6330c
+6,59,Cliff Gaskin Reserve,yes,Makara,-41.26252,174.693982,Off leash,Off leash under control of owner,42907305-785c-40ff-ad21-8c5a11b38e4c
+7,60,Ataturk Memorial,no,Strathmore Park,-41.339427,174.82225,Off leash,Off leash under control of owner,d60280ca-30b0-4c0e-b240-d66e9e044aa5
+8,61,Seton Nossiter Park,no,Grenada Village,-41.212461,174.816768,Off leash,Off leash under control of owner,a3457420-ddb8-420f-b22b-09ecd77bcb59
+9,62,Waihinahina Park,no,Newlands,-41.221461,174.836538,Off leash,Off leash under control of owner,13fae79e-7449-4492-90c8-fefb4969dc07
+10,63,Trelissick Park,yes,Ngaio,-41.258575,174.770396,Off leash,Off leash under control of owner,85d24bc9-edf3-4490-8776-05d777c45f17
+11,64,Carrara Park ,yes,Newtown,-41.315264,174.783853,Off leash,Off leash under control of owner,956425f9-aaab-4de0-9b2a-45e43039de5b
+12,65,Liardet and Balfour St corner,yes,Berhampore,-41.319602,174.769653,Off leash,Off leash under control of owner,7e10abcd-8f63-4909-9c26-5d0d487e8b76
+13,66,Tawatawa Reserve,yes,Owhiro Bay,-41.331059,174.761586,Off leash,Off leash under control of owner,4aeb523b-7172-4e62-ad0f-47b78940a517
+14,67,Te Ahumairangi Hill Lookout,no,Thorndon,-41.275021,174.76531,Off leash,Off leash under control of owner,3c585d57-1af9-46d9-930d-f9cd300e436b
+16,69,MacAlister Park,no,Berhampore,-41.314679,174.77268,Off leash,Off leash under control of owner,84413b6c-ddfe-4785-9b3e-fc4b17e46d59
+17,70,Monaghan Avenue Reserve,yes,Karori,-41.290932,174.737259,Off leash,Off leash under control of owner,d7779cc6-29a2-40ca-b89b-5c916c181510
+18,71,Meekswood Reserve,yes,Johnsonville,-41.215789,174.803555,Off leash,Off leash under control of owner,23e94b2a-83dd-4c33-b7a8-3e92fc6b2bf8
+19,72,Cummings Park,no,Ngaio,-41.248855,174.773496,Off leash,Off leash under control of owner,9a0aeb78-f637-4394-8405-146ed77eeeb7
+20,73,Edward Wilson Park,yes,Churton Park,-41.211,174.810784,Off leash,Off leash under control of owner,4a987bba-b19d-4cd4-902c-6858ae9c061c
+21,74,Arthur Carmen,yes,Tawa,-41.157421,174.837406,Off leash with restrictions,Off leash 1 November to 31 January only.  Prohibited the rest of the year,10b09ab1-7a9c-4d47-b74d-9c4e7e3d0ecc
+22,75,Tukanae St Reserve,yes,Strathmore Park,-41.334739,174.818417,Off leash,Off leash under control of owner,ee886ae1-2cbd-47dc-a5e3-aa1cd0455490
+23,76,Kowhai Park,no,Brooklyn,-41.314474,174.757833,Off leash,Off leash under control of owner,7f9659e6-9220-4a0b-92aa-746a05e6ff87
+24,77,Ellice St Quarry,yes,Mt Victoria,-41.301999,174.787374,Off leash,Off leash under control of owner,40eb3f64-68e2-4b0f-81cf-b762cc8624ab
+25,78,Hataitai Park,yes,Hataitai,-41.307346,174.790295,Off leash,Off leash under control of owner,411052f1-3431-4946-82ba-3b2e3a3c5af0
+26,79,Mt Albert Park,yes,Berhampore,-41.324692,174.780952,Off leash,Off leash under control of owner,e1e031fb-0577-4adf-bdda-43d8998a0ec9
+27,80,Sinclair Park,yes,Houghton Bay,-41.332779,174.785729,Off leash,Off leash under control of owner,3a866a37-77bd-4c93-a50a-4c982656c1a7
+28,81,Bann St,yes,Southgate,-41.342073,174.778984,Off leash,Off leash under control of owner,8657d9f0-0f7f-4030-a6b1-248b7a8dfe1b
+29,82,Reef St,yes,Island Bay,-41.343031,174.772611,Off leash,Off leash under control of owner,6c851c19-76fe-409d-9bb1-72baac687696
+31,84,Charles Plimmer Park,no,Mt Victoria,-41.296155,174.790085,Off leash,Off leash under control of owner,91993c23-4962-443c-9b5d-13bf56cba626
+32,85,Izard Park,yes,Wilton,-41.264509,174.763218,Off leash,Off leash under control of owner,b804fa95-b458-4601-9e50-e5c730310d01
+33,86,Grasslees Reserve,yes,Tawa,-41.163591,174.828635,Off leash,Off leash under control of owner,4f82a354-f5ed-4ee1-b7e7-fb2fbc0c8508
+34,87,Flinders Park,yes,Johnsonville,-41.218297,174.793984,Off leash,Off leash under control of owner,8d054295-ac92-4421-9c95-8b3471564f00
+37,90,Tanera Park,yes,Brooklyn,-41.302318,174.76344,Off leash,Off leash under control of owner,68679145-e1a0-4765-97a0-ae0ec30db559
+38,91,Odell Reserve,yes,Khandallah,-41.253532,174.783445,Off leash,Off leash under control of owner,9c5d96b7-e05f-49cb-8eb9-7224465859a0
+39,92,Newtown Park,yes,Berhampore,-41.325158,174.783119,Off leash,Off leash under control of owner,a2d32058-fa4c-484a-8936-6c08ee28baf3
+45,98,Cog Park,yes,Hataitai,-41.304601,174.801642,Off leash,Off leash under control of owner. The site is fully fenced.,eb1d03fe-f4b8-41d4-bf91-a31a5d5b1098
+46,99,Willowbank Reserve,no,Tawa,-41.187682,174.828207,Off leash,Off leash under control of owner,923b4bbf-f8c6-4184-9495-d80152c02647
+47,100,Willowbank Park,no,Tawa,-41.184052,174.826963,Off leash,Off leash under control of owner,303cb825-6f07-408c-921f-b724311f21f5
+48,101,Taylor Park,yes,Tawa,-41.177812,174.827139,Off leash,Off leash under control of owner,0ee0074f-d2f6-4cb2-89ae-aa03f8ab96c3
+49,102,Dorrie Leslie Park,yes,Lyall Bay,-41.338343,174.792986,Off leash,Off leash under control of owner,cc57b900-a53b-4421-89f1-4b417fb539ef
+51,111,Chelmsford Reserve,yes,Ngaio,-41.248569,174.7711,Off leash,Off leash under control of owner,07e99581-4d97-4198-96c9-3341599c8334
+53,127,Alexandra Road West,yes,Newtown,-41.308785,174.787089,Off leash,Off leash under control of owner,6a699bb2-6efe-477a-a7c0-3220ac4b3dca
+56,139,Lyall Bay Beach,Yes,Lyall Bay,-41.329238,174.795951,Off leash,Off leash under control of owner,4f1772e6-807b-4a5f-be3e-b9f4498f428e
+64,148,Hataitai Beach,yes,Hataitai,-41.300399,174.798287,On leash with restrictions,On leash before 9am and after 7pm during daylight saving.  On leash at all times in winter,5fe0aa4d-914f-45ad-8e7d-4dde8c536b64
+67,152,Waitangi Park,yes,Te Aro,-41.291376,174.784972,Prohibited, ,78602cf7-8894-4456-a7f5-7ac2b0d3f64b
+72,0,Evans Bay Beach,yes,Kilbirnie/Rongotai,-41.315477,174.795413,Off leash,Off leash under control of owner,c8d35583-29fb-46b4-b963-9044fabd712c
+75,68,Ian Galloway Park,yes,Wilton,-41.27664,174.754733,Off leash,Off leash under control of owner,c0bc5e80-7dc9-4da1-9bb6-d245738c30f3
