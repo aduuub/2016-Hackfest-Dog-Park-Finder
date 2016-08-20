@@ -57,6 +57,39 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight:100;
 }
+
+
+
+.slider-width-review
+{
+    width: 100px;
+}
+
+
+
+.slider-div{
+	width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-- Navigation --*/
 /* Effect 20: 3D side */
 .cl-effect-20 a {
