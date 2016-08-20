@@ -21,6 +21,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<!-- /font files -->
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Quicksand" rel="stylesheet">
+
 	<!-- js files -->
 	<script src="js/modernizr.custom.js"></script>
 	<script type="text/javascript">
@@ -48,7 +50,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			marker.addListener('click', function(){
 				console.log("clicked");
 				map.setZoom(18);
-				
+
+
+
+
 			});
 		}
 
@@ -126,38 +131,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<section class="about-us" id="about">
 		<div class="container">
 
-			<h3 class="text-center slideanim">Nearby Parks</h3>
-
+			<div class="google-font-heading">Park Search</div>
 			<!-- Row -->
 			<div class="row"> 
 				<div class="col-lg-6 col-md-6 col-sm-6">
-				<div class="column-div">
-					<div class="query">
-						<!-- Query -->
-						<h3>Query</h3>	
+					<div class="results-container">
+						<div class="query">
+							<!-- Query -->
+							<div class="google-font-subheading">Sniff out a park near you</div>
+							<br> </br>	
+						<input type="checkbox" name="vehicle" value="Bike">	No road front <br>
+						<input type="checkbox" name="vehicle" value="Bike"> Off leash <br>
+						<br><br>
+
+					</div> <!-- Closing query div -->
+
+					<!-- End Query -->
+					<!-- Details -->
+
+					<div class="results">
+
 						<br>
-						<p>Below you can refine the search.</p>
-					</br>	
-					<input type="checkbox" name="vehicle" value="Bike">		Must be off road front <br>
-					<input type="checkbox" name="vehicle" value="Bike">		Must be off leash <br>
-					<br><br>
+						<p>Name</p>
+						<p>Suburb</p>
+						<p>Restrictions</p>
+						<p>Road Side</p>
+						<p></p>
 
-				</div> <!-- Closing query div -->
-
-				<!-- End Query -->
-				<!-- Details -->
-
-				<div class="results">
-
-					<h3>Details of Location</h3>
-					<br>
-					<p>Name</p>
-					<p>Suburb</p>
-					<p>Restrictions</p>
-					<p>Road Side</p>
-					<p></p>
-
-				</div>
+					</div> <!-- Closing query -->
 
 				</div> <!-- Closing column div -->
 			</div> <!-- Closing Column -->
@@ -183,7 +184,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <section class="about-us" id="about">
 	<div class="container">
 
-		<h3 class="text-center slideanim">Bark Back</h3>
+		<div class="google-font-heading">Bark Back</div>
 		
 		<!-- Row -->
 		<div class="row"> 
@@ -198,10 +199,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 						<ul class="bark-backs">
-								<li>
-									<img src="images/icons/dog1.png">
-									<p> My dog had a great time at the park </p>
-								</li>	
+							<li>
+								<img src="images/icons/dog1.png">
+								<p> My dog had a great time at the park </p>
+							</li>	
+
+							<li>
+								<img src="images/icons/dog2.png">
+								<p> My dog had a great time at the park </p>
+							</li>	
 							
 
 						</ul>

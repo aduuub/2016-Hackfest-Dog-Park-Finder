@@ -90,6 +90,12 @@ body {
 	height: 500px;
 }
 
+.results-container{
+	padding-top: 50px;
+	background-color: #FFF;
+	height: 600px;
+}
+
 .comment-box{
 	height: 42px;
 
@@ -305,6 +311,26 @@ section.our-services h3.text-center{
 section.our-services p.text-center{ 
 	color: #D2D1D1;
 }
+
+.google-font-heading{
+
+	font-family: 'Baloo Paaji', cursive;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	font-size: 34px;
+	font-color: #FFF;
+	padding: 60px;
+}
+
+.google-font-subheading{
+
+	font-family: 'Baloo Paaji', cursive;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	font-size: 22px;
+	padding-bottom: 25px;	
+}
+
 #features .ac a{
 	font-size: 20px;
 	font-weight:normal;
