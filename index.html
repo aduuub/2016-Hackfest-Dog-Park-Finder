@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Outing Travel Category Flat Bootstrap Responsive  Website Template | Home :: w3layouts</title>
+<title>Woof Pack</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Outing Travel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -24,6 +24,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- js files -->
 <script src="js/modernizr.custom.js"></script>
 <!-- /js files -->
+<style> #map {
+        width: 100%;
+        height: 600px;
+     }
+</style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <div class="navbar-wrapper">
@@ -42,10 +47,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div id="navbar" class="navbar-collapse collapse navbar-right">
 					<ul class="nav navbar-nav">
 						<li><a href="#"><span data-hover="Home">Home</span></a></li>
-						<li><a href="#about"><span data-hover="About">About</span></a></li>
-						<li><a href="#service"><span data-hover="Services">Services</span></a></li>
+						<li><a href="#Nearby Parks"><span data-hover="About">About</span></a></li>
+						<li><a href="#Chat"><span data-hover="Services">Services</span></a></li>
 						<li><a href="#events"><span data-hover="Events">Events</span></a></li>
-						<li><a href="#gallery"><span data-hover="Gallery">Gallery</span></a></li>
+						<li><a href="#Gallery"><span data-hover="Gallery">Gallery</span></a></li>
 						<li><a href="#testimonials"><span data-hover="Testimonials">Testimonials</span></a></li>
 						<li><a href="#contact"><span data-hover="Contact">Contact</span></a></li>
 					</ul>
@@ -87,23 +92,61 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- /Banner Section -->
 <!-- About Section -->
 <section class="about-us" id="about">
-	<h3 class="text-center slideanim">About Us</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-	<div class="container">
-		<div class="row">
+<div class="container">
+
+	<h3 class="text-center slideanim">Nearby Parks</h3>
+	<p class="text-center slideanim">Below is an interactive map where you can view the nearby parks suitable for walking dogs.</p>
+		
+		<!-- Row -->
+		<div class="row"> 
 			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img src="images/about-img.jpg" alt="about" class="img-responsive slideanim">
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6">
-				<div class="about-info">
-					<h4 class="slideanim">We're The Best</h4>
-					<p class="abt slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-					<p class="abt slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+				
+				<!-- Query -->
+				<h3>Query</h3>	
+				<br>
+				<p>Below you can refine the search.</p>
+				</br>	
+				<input type="checkbox" name="vehicle" value="Bike">		Must be off road front <br>
+				<input type="checkbox" name="vehicle" value="Bike">		Must be off leash <br>
+				<br><br>
+
+				<!-- End Query -->
+				<!-- Details -->
+
+				<h3>Details of Location</h3>
+				<br>
+				<p>Name</p>
+				<p>Suburb</p>
+				<p>Restrictions</p>
+				<p>Road Side</p>
+				<p></p>
+
+		</div> <!-- Closing Column -->
+		<div class="col-lg-6 col-md-6 col-sm-6">
+
+					<div id="map">
+    					<script>
+      						function initMap() {
+       							 var mapDiv = document.getElementById('map');
+       							 var map = new google.maps.Map(mapDiv, {
+           							 center: {lat: -41.2865, lng: 174.7762},
+            					zoom: 14
+       						 });
+      						}	
+
+    					</script>
+    				</div> <!-- Closing the map -->
+
+    	</div> <!-- Closing the Column -->
+
+    </div> <!-- Closing the row -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB79P4p04uaJVvmGHo4MaLbprB-2s5uj0E&callback=initMap">
+    </script>
+   </div>
 </section>
+
+
 <!-- /About Section -->
 <!-- Services Section -->
 <section class="our-services slideanim" id="service">
@@ -168,25 +211,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Events -->
 <section class="our-events slideanim" id="events">
 	<h3 class="text-center slideanim">Our Events</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<p class="text-center slideanim">We host doggy day events.</p>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-4">
 				<div class="event-info">
-					<h4 class="text-center slideanim">March 24th</h4>
-					<p class="eve slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4 class="text-center slideanim">Make Dog Treats with the Cookie Ladies!</h4>
+					<p class="eve slideanim">Join us for a FREE how-to on making treats for your pups! 
+We will provide you with the recipe, ingredients and demonstration. Just bring yourself a "to go" container(and an apron if you like). 
+As always, dogs are welcome in our store... but your hands WILL be full... and maybe sticky ;)</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="event-info">
-					<h4 class="text-center slideanim">March 26th</h4>
-					<p class="eve slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4 class="text-center slideanim">Football Themed Pet Portraits</h4>
+					<p class="eve slideanim">Stop by & have your pet's photo taken with fun props/background & support MidAmerica Boston Terrier Rescue!
+
+
+$10 includes 2 photos & a personalized trading card of your pet 
+
+(images emailed or mailed to you after the event)
+
+Cash, Check or Credit Card 
+
+All proceeds benefit MidAmerica Boston Terrier Rescue (www.adoptaboston.com)</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4">
 				<div class="event-info">
-					<h4 class="text-center slideanim">March 28th</h4>
-					<p class="eve slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<h4 class="text-center slideanim">Bark at the Park</h4>
+					<p class="eve slideanim">The Colorado Rockies are proud to announce the annual Bark at the Park on Tuesday, August 16th, presented by AvoDerm Natural Pet Foods, Nylabone, and Petsmart.
+
+Dogs and owners alike can partake in the fun and festivities as the Rockies take on the Washington Nationals.With each paid human ticket one dog is allowed in for free.</p>
 				</div>
 			</div>
 		</div>
@@ -195,8 +251,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- /Events -->
 <!-- Gallery Section -->
 <section class="our-gallery" id="gallery">
-	<h3 class="text-center slideanim">Our Gallery</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<h3 class="text-center slideanim">Gallery</h3>
+	<p class="text-center slideanim">Photos of the beautiful parks Wellington has to offer.</p>
 	<div class="container">
 		<img src="images/gallery-img1.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
         <img src="images/gallery-img2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
@@ -209,60 +265,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </section>
 <!-- /Gallery Section -->
-<!-- Testimonials -->
-<section class="our-testimonials slideanim" id="testimonials">
-	<h3 class="text-center slideanim">What Our Clients Say</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 col-md-4">
-				<div class="test">
-					<img src="images/test-img1.png" class="img-responsive slideanim" alt="">
-					<h4 class="text-center slideanim">Lorem Ipsum</h4>
-					<p class="t1 slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4">
-				<div class="test">
-					<img src="images/test-img2.png" class="img-responsive slideanim" alt="">
-					<h4 class="text-center slideanim">Lorem Ipsum</h4>
-					<p class="t1 slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4">
-				<div class="test">
-					<img src="images/test-img3.png" class="img-responsive slideanim" alt="">
-					<h4 class="text-center slideanim">Lorem Ipsum</h4>
-					<p class="t1 slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Testimonials -->
-<!-- Google Map -->
-<section class="map">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12 slideanim">
-				<iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d380510.6741687111!2d-88.01234121699822!3d41.83390417061058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1455598377120" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /Google Map -->
 <!-- Contact Section -->
 <section class="our-contacts slideanim" id="contact">
 	<h3 class="text-center slideanim">Contact Us</h3>
-	<p class="text-center slideanim">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<p class="text-center slideanim">Use the below form to contact us.</p>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<form role="form">
 					<div class="row">
-						<div class="form-group col-lg-4 slideanim">
-							<input type="text" class="form-control user-name" placeholder="Your Name" required/>
-						</div>
 						<div class="form-group col-lg-4 slideanim">
 							<input type="email" class="form-control mail" placeholder="Your Email" required/>
 						</div>
