@@ -41,7 +41,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			var marker = new google.maps.Marker({
 				position: myLatLng,
 				map: map,
+				id: "markerOne",
 				title: 'Hello World!'
+			});
+
+			marker.addListener('click', function(){
+				console.log("clicked");
+				map.setZoom(18);
+				
 			});
 		}
 
@@ -120,32 +127,39 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 
 			<h3 class="text-center slideanim">Nearby Parks</h3>
-			<p class="text-center slideanim">Below is an interactive map where you can view the nearby parks suitable for walking dogs.</p>
 
 			<!-- Row -->
 			<div class="row"> 
 				<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="column-div">
+					<div class="query">
+						<!-- Query -->
+						<h3>Query</h3>	
+						<br>
+						<p>Below you can refine the search.</p>
+					</br>	
+					<input type="checkbox" name="vehicle" value="Bike">		Must be off road front <br>
+					<input type="checkbox" name="vehicle" value="Bike">		Must be off leash <br>
+					<br><br>
 
-					<!-- Query -->
-					<h3>Query</h3>	
-					<br>
-					<p>Below you can refine the search.</p>
-				</br>	
-				<input type="checkbox" name="vehicle" value="Bike">		Must be off road front <br>
-				<input type="checkbox" name="vehicle" value="Bike">		Must be off leash <br>
-				<br><br>
+				</div> <!-- Closing query div -->
 
 				<!-- End Query -->
 				<!-- Details -->
 
-				<h3>Details of Location</h3>
-				<br>
-				<p>Name</p>
-				<p>Suburb</p>
-				<p>Restrictions</p>
-				<p>Road Side</p>
-				<p></p>
+				<div class="results">
 
+					<h3>Details of Location</h3>
+					<br>
+					<p>Name</p>
+					<p>Suburb</p>
+					<p>Restrictions</p>
+					<p>Road Side</p>
+					<p></p>
+
+				</div>
+
+				</div> <!-- Closing column div -->
 			</div> <!-- Closing Column -->
 			<div class="col-lg-6 col-md-6 col-sm-6">
 
@@ -169,185 +183,205 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <section class="about-us" id="about">
 	<div class="container">
 
-		<h3 class="text-center slideanim">Reviews</h3>
-		<p class="text-center slideanim">Review the parks around you.</p>
+		<h3 class="text-center slideanim">Bark Back</h3>
 		
 		<!-- Row -->
 		<div class="row"> 
-			<div class="col-lg-6 col-md-6 col-sm-6">
-				<h4>Leave a review</h4>
-				<br> <br>g
+			<div class="col-lg-6 col-md-6 col-sm-6" id="column-div">
+				<div class="column-div">
+
+					<div class="slider-div">
+
+						<!-- Query -->
+						<h4>Previous Bark Backs</h4>
+						<br><br>
 
 
-				<!-- Query -->
-				<div class="slider-div">
+						<ul class="bark-backs">
+								<li>
+									<img src="images/icons/dog1.png">
+									<p> My dog had a great time at the park </p>
+								</li>	
+							
 
-					<p> Saftey</p>
-					<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-					<span id="range">0</span>
+						</ul>
 
-					<br><br>
+					</div> <!-- CLOSING Slider DIV -->	
 
-					<p>Location</p>
-					<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-					<span id="range">0</span>
-
-					<br><br>
-
-					<p>Facilities</p>
-					<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-					<span id="range">0</span>
+				</div> <!-- CLOSING COLUMN DIV -->	
 
 
-					
+			</div> <!-- Closing Column -->
+			<div class="col-lg-6 col-md-6 col-sm-6" id="column-div">
+				<div class="column-div">
 
-</div> <!-- CLOSING SLIDER DIVE
-			
+					<div class="slider-div">
 
-</div> <!-- Closing Column -->
-<div class="col-lg-6 col-md-6 col-sm-6">
+						<h4>Have Your Say</h4>
+						<br> <br>
 
-	<!-- Add shit here -->
+						<p> Size of your dog</p>
+						<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
+						<span id="range">0</span>
 
-</div> <!-- Closing the Column -->
+						<br><br>
 
-</div> <!-- Closing the row -->
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB79P4p04uaJVvmGHo4MaLbprB-2s5uj0E&callback=initMap">
-</script>
-</div>
+						<p>Saftey for your dog</p>
+						<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
+						<span id="range">0</span>
+
+						<br><br>
+
+						<p>Star Rating</p>
+						<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
+						<span id="range">0</span>
+
+						<br><br><br>
+
+						<p>Comment</p><br>
+
+						<input type="text" name="comment" placeholder="Placeholder text" class="comment-box" size="38" id="comment-box"><br>
+
+					</div> <!-- CLOSING SLIDER DIV -->
+				</div> <!-- CLOSING COLUMN DIV -->
+
+			</div> <!-- Closing the row -->
+			<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB79P4p04uaJVvmGHo4MaLbprB-2s5uj0E&callback=initMap">
+		</script>
+	</div>
 </section>
 <!-- /Services Section -->
 
-			<!-- Gallery Section -->
-			<section class="our-gallery" id="gallery">
-				<h3 class="text-center slideanim">Gallery</h3>
-				<p class="text-center slideanim">Photos of the beautiful parks Wellington has to offer.</p>
-				<div class="container">
-					<img src="images/gallery-img1.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-					<img src="images/gallery-img2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-					<img src="images/gallery-img3.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-					<img src="images/gallery-img4.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-					<img src="images/gallery-img5.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-					<img src="images/gallery-img6.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-					<img src="images/gallery-img7.jpg" data-darkbox="images/gallery-img7-7.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-					<img src="images/gallery-img8.jpg" data-darkbox="images/gallery-img8-8.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-				</div>
-			</section>
-			<!-- /Gallery Section -->
-			<!-- Contact Section -->
-			<section class="our-contacts slideanim" id="contact">
-				<h3 class="text-center slideanim">Contact Us</h3>
-				<p class="text-center slideanim">Use the below form to contact us.</p>
-				<div class="container">
+<!-- Gallery Section -->
+<section class="our-gallery" id="gallery">
+	<h3 class="text-center slideanim">Gallery</h3>
+	<p class="text-center slideanim">Photos of the beautiful parks Wellington has to offer.</p>
+	<div class="container">
+		<img src="images/gallery-img1.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img3.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img4.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img5.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img6.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img7.jpg" data-darkbox="images/gallery-img7-7.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img8.jpg" data-darkbox="images/gallery-img8-8.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+	</div>
+</section>
+<!-- /Gallery Section -->
+<!-- Contact Section -->
+<section class="our-contacts slideanim" id="contact">
+	<h3 class="text-center slideanim">Contact Us</h3>
+	<p class="text-center slideanim">Use the below form to contact us.</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<form role="form">
 					<div class="row">
-						<div class="col-lg-12">
-							<form role="form">
-								<div class="row">
-									<div class="form-group col-lg-4 slideanim">
-										<input type="email" class="form-control mail" placeholder="Your Email" required/>
-									</div>
-									<div class="form-group col-lg-4 slideanim">
-										<input type="tel" class="form-control pno" placeholder="Your Phone Number" required/>
-									</div>
-									<div class="clearfix"></div>
-									<div class="form-group col-lg-12 slideanim">
-										<textarea class="form-control" rows="6" placeholder="Your Message" required/></textarea>
-									</div>
-									<div class="form-group col-lg-12 slideanim">
-										<button type="submit" href="#" class="btn-outline1">Submit</button>
-									</div>
-								</div>
-							</form>
+						<div class="form-group col-lg-4 slideanim">
+							<input type="email" class="form-control mail" placeholder="Your Email" required/>
+						</div>
+						<div class="form-group col-lg-4 slideanim">
+							<input type="tel" class="form-control pno" placeholder="Your Phone Number" required/>
+						</div>
+						<div class="clearfix"></div>
+						<div class="form-group col-lg-12 slideanim">
+							<textarea class="form-control" rows="6" placeholder="Your Message" required/></textarea>
+						</div>
+						<div class="form-group col-lg-12 slideanim">
+							<button type="submit" href="#" class="btn-outline1">Submit</button>
 						</div>
 					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /Contact Section -->
+<!-- Footer Section -->
+<section class="footer">
+	<h2 class="text-center">THANKS FOR VISITING US</h2>
+	<hr>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 footer-left">
+				<h4>Contact Information</h4>
+				<div class="contact-info">
+					<div class="address">
+						<i class="glyphicon glyphicon-globe"></i>
+						<p class="p3">77 Jack Street</p>
+						<p class="p4">Chicago, USA</p>
+					</div>
+					<div class="phone">
+						<i class="glyphicon glyphicon-phone-alt"></i>
+						<p class="p3">+1 515 151515</p>
+						<p class="p4">+00 1010101010</p>
+					</div>
+					<div class="email-info">
+						<i class="glyphicon glyphicon-envelope"></i>
+						<p class="p3"><a href="mailto:email1@example.com">email1@example.com</a></p>
+						<p class="p4"><a href="mailto:email2@example.com">email2@example.com</a></p>
+					</div>
 				</div>
-			</section>
-			<!-- /Contact Section -->
-			<!-- Footer Section -->
-			<section class="footer">
-				<h2 class="text-center">THANKS FOR VISITING US</h2>
-				<hr>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 footer-left">
-							<h4>Contact Information</h4>
-							<div class="contact-info">
-								<div class="address">
-									<i class="glyphicon glyphicon-globe"></i>
-									<p class="p3">77 Jack Street</p>
-									<p class="p4">Chicago, USA</p>
-								</div>
-								<div class="phone">
-									<i class="glyphicon glyphicon-phone-alt"></i>
-									<p class="p3">+1 515 151515</p>
-									<p class="p4">+00 1010101010</p>
-								</div>
-								<div class="email-info">
-									<i class="glyphicon glyphicon-envelope"></i>
-									<p class="p3"><a href="mailto:email1@example.com">email1@example.com</a></p>
-									<p class="p4"><a href="mailto:email2@example.com">email2@example.com</a></p>
-								</div>
-							</div>
-						</div><!-- col -->
-						<div class="col-md-4 footer-center">
-							<h4>Newsletter</h4>
-							<p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
-							<form class="form-horizontal" role="form">
-								<div class="form-group">
-									<label for="inputEmail1" class="col-lg-4 control-label"></label>
-									<div class="col-lg-10">
-										<input type="email" class="form-control" id="inputEmail1" placeholder="Email" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="text1" class="col-lg-4 control-label"></label>
-									<div class="col-lg-10">
-										<input type="text" class="form-control" id="text1" placeholder="Your Name" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-lg-10">
-										<button type="submit" class="btn-outline">Sign in</button>
-									</div>
-								</div>
-							</form><!-- form -->
-						</div><!-- col -->
-						<div class="col-md-4 footer-right">
-							<h4>Support Us</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-							<ul class="social-icons2">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div><!-- col -->
-					</div><!-- row -->
-				</div><!-- container -->
-				<hr>
-				<div class="copyright">
-					<p>© 2016 Outing. All Rights Reserved | Design by <a href="http://w3layouts.com" target="_blank">W3layouts</a></p>
-				</div>
-			</section>
-			<!-- /Footer Section -->
-			<!-- Back To Top -->
-			<a href="#0" class="cd-top">Top</a>
-			<!-- /Back To Top -->
+			</div><!-- col -->
+			<div class="col-md-4 footer-center">
+				<h4>Newsletter</h4>
+				<p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-4 control-label"></label>
+						<div class="col-lg-10">
+							<input type="email" class="form-control" id="inputEmail1" placeholder="Email" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="text1" class="col-lg-4 control-label"></label>
+						<div class="col-lg-10">
+							<input type="text" class="form-control" id="text1" placeholder="Your Name" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-lg-10">
+							<button type="submit" class="btn-outline">Sign in</button>
+						</div>
+					</div>
+				</form><!-- form -->
+			</div><!-- col -->
+			<div class="col-md-4 footer-right">
+				<h4>Support Us</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<ul class="social-icons2">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				</ul>
+			</div><!-- col -->
+		</div><!-- row -->
+	</div><!-- container -->
+	<hr>
+	<div class="copyright">
+		<p>© 2016 Outing. All Rights Reserved | Design by <a href="http://w3layouts.com" target="_blank">W3layouts</a></p>
+	</div>
+</section>
+<!-- /Footer Section -->
+<!-- Back To Top -->
+<a href="#0" class="cd-top">Top</a>
+<!-- /Back To Top -->
 
-			<!-- js files -->
-			<script src="js/jquery.min.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-			<script src="js/SmoothScroll.min.js"></script>
-			<!-- js for gallery -->
-			<script src="js/darkbox.js"></script>
-			<!-- /js for gallery -->
-			<!-- js for back to top -->
-			<script src="js/main.js"></script>
-			<!-- /js for back to top -->
-			<!-- js for nav-smooth scroll -->
-			<script>
-				$(document).ready(function(){
+<!-- js files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<!-- js for gallery -->
+<script src="js/darkbox.js"></script>
+<!-- /js for gallery -->
+<!-- js for back to top -->
+<script src="js/main.js"></script>
+<!-- /js for back to top -->
+<!-- js for nav-smooth scroll -->
+<script>
+	$(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
