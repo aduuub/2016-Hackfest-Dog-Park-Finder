@@ -125,11 +125,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="results">
 
 								<br>
-								<p>Name</p>
-								<p>Suburb</p>
-								<p>Restrictions</p>
-								<p>Road Side</p>
-								<p></p>
+
+								<p>Name</p> <span id="parkName"> </span>
+								<p>Suburb</p> <span id="parkSuburb"> </span>
+								<p>Restrictions</p> <span id="parkRestrictions"> </span>
+								<p>Road Side</p> <span id="parkRoadSide"> </span>
 
 							</div> <!-- Closing query -->
 
@@ -424,13 +424,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		var marker = new google.maps.Marker({
 			position: myLatLng,
 			map: map,
-			id: "",
-			title: park.name
+			id: park._id,
+			details: park.Details,
+			suburb: park.suburb,
+			title: park.name,
+			road_front: park.road_front
 		});
 
 		marker.addListener('click', function(){
 			console.log("clicked");
+			map.panTo(marker.position);
 			map.setZoom(18);
+
+			console.log(marker.title);
+
+			$("#parkName").text(marker.title);
+			$("#parkSuburb").text(marker.suburb);
+			$("#parkRestrictions").text(marker.details);
+			$("#parkRoadSide").text(marker.road_front);
+
 		});
 	}
 
