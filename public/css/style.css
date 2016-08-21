@@ -59,7 +59,24 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight:100;
 }
+.about-us .row{
 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.about-us .column-div{
+	padding: 0;
+}
+.about-us .google-font-subheading{
+	padding: 20px 30px ;
+	background-color: rgb(230, 230, 230);
+	font-weight: bold;
+	text-align: left;
+}
+.about-us .col{
+	background-color: blue;
+}
 #myCarousel .carousel-inner .title2 {
 	width: 100%;
 	margin: 0px auto;
@@ -99,8 +116,79 @@ body {
 	margin-left: 37.5%;
 
 }
-.bone{
-
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #b1b1b1;
+  border-radius: 1.3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  background: #F7AA33;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #b1b1b1;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #b1b1b1;
+  border-radius: 1.3px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  background: #F7AA33;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #b1b1b1;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #b1b1b1;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  background: #F7AA33;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #b1b1b1;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #b1b1b1;
 }
   section.our-gallery h3.text-center.pugs {
 	font-family: 'Quicksand';
