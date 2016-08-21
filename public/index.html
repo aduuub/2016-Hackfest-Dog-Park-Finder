@@ -25,7 +25,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- js files -->
 	<script src="js/modernizr.custom.js"></script>
-	
+
 	<!-- /js files -->
 	<style>
 
@@ -53,12 +53,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div id="navbar" class="navbar-collapse collapse navbar-right">
 						<ul class="nav navbar-nav">
 							<li><a href="#"><span data-hover="Home">Home</span></a></li>
-							<li><a href="#Nearby Parks"><span data-hover="About">About</span></a></li>
-							<li><a href="#Chat"><span data-hover="Services">Services</span></a></li>
-							<li><a href="#events"><span data-hover="Events">Events</span></a></li>
-							<li><a href="#Gallery"><span data-hover="Gallery">Gallery</span></a></li>
-							<li><a href="#testimonials"><span data-hover="Testimonials">Testimonials</span></a></li>
-							<li><a href="#contact"><span data-hover="Contact">Contact</span></a></li>
+							<li><a href="#about"><span data-hover="Park Search">Park Search</span></a></li>
+							<li><a href="#baark"><span data-hover="Bark Back">Bark Back</span></a></li>
+							<li><a href="#gallery"><span data-hover="Pug Shots">Pug Shots</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -130,7 +127,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<p><span id="parkSuburb">Suburb</span> </p>
 								<br>
 
-								<p>Restrictions: <span id="parkRestrictions"> </span></p> 
+								<p>Restrictions: <span id="parkRestrictions"> </span></p>
 								<p>Road Side: <span id="parkRoadSide"> </span> </p>
 
 							</div> <!-- Closing query -->
@@ -156,7 +153,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- /About Section -->
 	<!-- Services Section -->
 	<<!-- About Section -->
-	<section class="about-us" id="about">
+	<section class="about-us" id="baark">
 		<div class="container">
 
 			<div class="google-font-heading">Bark Back</div>
@@ -199,26 +196,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="google-font-subheading">Have your say</div>
 
 							<p> Size of your dog</p>
-							<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-							<span id="range">0</span>
+							<input type="range" min="1" max="3" value="0" step="1" width="50" id="dog-size"/>
 
 							<br><br>
 
 							<p>Saftey for your dog</p>
-							<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-							<span id="range">0</span>
+							<input type="range" min="1" max="3" value="0" step="1" width="50" id="safety"/>
 
 							<br><br>
 
 							<p>Star Rating</p>
-							<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-							<span id="range">0</span>
+							<input type="range" min="1" max="5" value="0" step="1" width="50" id="overall-rating"/>
 
 							<br><br><br>
 
 							<p>Comment</p><br>
 
 							<input type="text" name="comment" placeholder="Placeholder text" class="comment-box" size="38" id="comment-box"><br>
+							<button type="button" id="submit-review">Submit Review!</button>
 
 						</div> <!-- CLOSING SLIDER DIV -->
 					</div> <!-- CLOSING COLUMN DIV -->
@@ -231,118 +226,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</section>
 	<!-- /Services Section -->
 
-	<!-- Gallery Section -->
-	<section class="our-gallery" id="gallery">
-		<h3 class="text-center slideanim">Gallery</h3>
-		<p class="text-center slideanim">Photos of the beautiful parks Wellington has to offer.</p>
-		<div class="container">
-			<img src="images/gallery-img1.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-			<img src="images/gallery-img2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-			<img src="images/gallery-img3.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-			<img src="images/gallery-img4.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-			<img src="images/gallery-img5.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-			<img src="images/gallery-img6.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-			<img src="images/gallery-img7.jpg" data-darkbox="images/gallery-img7-7.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-			<img src="images/gallery-img8.jpg" data-darkbox="images/gallery-img8-8.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		</div>
-	</section>
+<!-- Gallery Section -->
+<section class="our-gallery" id="gallery">
+	<h3 class="text-center slideanim pugs">Pug Shots</h3>
+	<div class="container slideanim gallery"><img src="images/icons/bone-04.png"></div>
+	<div class="container gallery">
+		<img src="images/doggo.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/doggo2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/doggos.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/more doggos.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/pupper.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/pupper 2.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<!-- <img src="images/gallery-img7.jpg" data-darkbox="images/gallery-img7-7.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img8.jpg" data-darkbox="images/gallery-img8-8.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim"> -->
+	</div>
+</section>
 	<!-- /Gallery Section -->
-	<!-- Contact Section -->
-	<section class="our-contacts slideanim" id="contact">
-		<h3 class="text-center slideanim">Contact Us</h3>
-		<p class="text-center slideanim">Use the below form to contact us.</p>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<form role="form">
-						<div class="row">
-							<div class="form-group col-lg-4 slideanim">
-								<input type="email" class="form-control mail" placeholder="Your Email" required/>
-							</div>
-							<div class="form-group col-lg-4 slideanim">
-								<input type="tel" class="form-control pno" placeholder="Your Phone Number" required/>
-							</div>
-							<div class="clearfix"></div>
-							<div class="form-group col-lg-12 slideanim">
-								<textarea class="form-control" rows="6" placeholder="Your Message" required/></textarea>
-							</div>
-							<div class="form-group col-lg-12 slideanim">
-								<button type="submit" href="#" class="btn-outline1">Submit</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- /Contact Section -->
-	<!-- Footer Section -->
-	<section class="footer">
-		<h2 class="text-center">THANKS FOR VISITING US</h2>
-		<hr>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 footer-left">
-					<h4>Contact Information</h4>
-					<div class="contact-info">
-						<div class="address">
-							<i class="glyphicon glyphicon-globe"></i>
-							<p class="p3">77 Jack Street</p>
-							<p class="p4">Chicago, USA</p>
-						</div>
-						<div class="phone">
-							<i class="glyphicon glyphicon-phone-alt"></i>
-							<p class="p3">+1 515 151515</p>
-							<p class="p4">+00 1010101010</p>
-						</div>
-						<div class="email-info">
-							<i class="glyphicon glyphicon-envelope"></i>
-							<p class="p3"><a href="mailto:email1@example.com">email1@example.com</a></p>
-							<p class="p4"><a href="mailto:email2@example.com">email2@example.com</a></p>
-						</div>
-					</div>
-				</div><!-- col -->
-				<div class="col-md-4 footer-center">
-					<h4>Newsletter</h4>
-					<p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
-					<form class="form-horizontal" role="form">
-						<div class="form-group">
-							<label for="inputEmail1" class="col-lg-4 control-label"></label>
-							<div class="col-lg-10">
-								<input type="email" class="form-control" id="inputEmail1" placeholder="Email" required>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="text1" class="col-lg-4 control-label"></label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" id="text1" placeholder="Your Name" required>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-lg-10">
-								<button type="submit" class="btn-outline">Sign in</button>
-							</div>
-						</div>
-					</form><!-- form -->
-				</div><!-- col -->
-				<div class="col-md-4 footer-right">
-					<h4>Support Us</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-					<ul class="social-icons2">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-					</ul>
-				</div><!-- col -->
-			</div><!-- row -->
-		</div><!-- container -->
-		<hr>
-		<div class="copyright">
-			<p>© 2016 Outing. All Rights Reserved | Design by <a href="http://w3layouts.com" target="_blank">W3layouts</a></p>
-		</div>
-	</section>
-	<!-- /Footer Section -->
 	<!-- Back To Top -->
 	<a href="#0" class="cd-top">Top</a>
 	<!-- /Back To Top -->
@@ -401,7 +300,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script>
 
 	window.addEventListener("DOMContentLoaded", function(){
-		initMap()		
+		initMap()
 	});
 
 
@@ -416,7 +315,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			console.log("THis is the map babyyyyy", map);
 			parks.forEach(function(park){
 				addMarker(park, map);
-			});			
+			});
 		});
 	}
 

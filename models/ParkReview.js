@@ -5,9 +5,9 @@ var Schema       = mongoose.Schema;
 var ParkReviewSchema  = new Schema({
  id: Number,
  name: String,
- size: Number, 
+ dogSize: String, 
  rating: Number,
- saftey: Number,
+ safety: Number,
  description: String
 },
 {collection : "parkreviews"});

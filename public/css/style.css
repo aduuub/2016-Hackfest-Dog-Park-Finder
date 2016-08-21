@@ -52,6 +52,7 @@ img {
 	-moz-transition:0.5s all;
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
+
 }
 /*-- /reset code --*/
 body {
@@ -96,6 +97,22 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	margin-left: 37.5%;
+
+}
+.bone{
+
+}
+  section.our-gallery h3.text-center.pugs {
+	font-family: 'Quicksand';
+	color: white;
+	padding: 10px 0;
+}
+.container.gallery{
+		display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+		padding: 0 20%;
 }
 
 
@@ -367,7 +384,7 @@ section.our-services p.text-center{
 	font-family: 'Quicksand', sans-serif;
 	text-align: center;
 	font-size: 22px;
-	padding-bottom: 30px;	
+	padding-bottom: 25px;
 }
 
 #features .ac a{
@@ -445,8 +462,14 @@ section.our-gallery {
 }
 section.our-gallery img.img-responsive {
 	display:inline;
-	width: 280px;
-	margin-bottom:4px;
+	width: 200px;
+	height: 200px;
+	margin:10px;
+}
+@media (max-width: 414px)
+section.our-gallery img.img-responsive {
+    width: 180px;
+		height: 180px;
 }
 /*
 Darkbox
