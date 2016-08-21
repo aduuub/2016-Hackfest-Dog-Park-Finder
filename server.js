@@ -5,9 +5,9 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var ParkReview = require('./models/ParkReview');
- var Park = require('./models/Park');
+var Park = require('./models/Park');
 
-var mongoose   = require('mongoose');
+var mongoose  = require('mongoose');
 mongoose.connect('mongodb://woof_pack:woofpack@ds147995.mlab.com:47995/walk_in_the_park'); // connect to our database
 
 
@@ -59,6 +59,16 @@ router.route('/parks')
 			res.send("Error getting parks",err);
 		}
 		res.json(parks);
+	});
+});
+
+router.route('/parkReview')
+.get(function(req,res){
+	ParkReview.find(function(err, review){
+		if(err){
+			res.send("Error getting park review",err);
+		}
+		res.json(review);
 	});
 });
 

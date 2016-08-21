@@ -9,6 +9,7 @@ var ParkReviewSchema  = new Schema({
  rating: Number,
  saftey: Number,
  description: String
-});
+},
+{collection : "parkreviews"});
 
 module.exports = mongoose.model('ParkReview', ParkReviewSchema);
