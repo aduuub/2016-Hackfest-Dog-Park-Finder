@@ -5,8 +5,9 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var ParkReview = require('./models/ParkReview');
+var Park = require('./models/Park');
 
-var mongoose   = require('mongoose');
+var mongoose  = require('mongoose');
 mongoose.connect('mongodb://woof_pack:woofpack@ds147995.mlab.com:47995/walk_in_the_park'); // connect to our database
 
 
@@ -40,26 +41,35 @@ router.use(function(req, res, next) {
 //method to create a new park review
 router.route('/parkReview')
 .post(function(req,res){
-	console.log("Creating park review", req.body.name);
 	var parkReview  = new ParkReview();
 	parkReview.name = req.body.name;
-	console.log(parkReview);
+	parkReview.size = req.body.size;
+	parkReview.rating = req.body.rating;
+	parkReview.saftey = req.body.saftey;
+	parkReview.description = req.body.description;
 	parkReview.save().then(function(newReview){
-		console.log(newReview);
-		res.json({message: 'Park Review created!'});
+		res.json(newReview);
 	}).then(null, function(err){
 		res.send("Error creating park review", err);
 	});
 });
 
 // more routes for our API will happen here
+router.route('/parks')
+.get(function(req,res){
+	Park.find(function(err, parks){
+		if(err){
+			res.send("Error getting parks",err);
+		}
+		res.json(parks);
+	});
+});
 
-router.route('/parkReview/:parkReview_id')
+router.route('/parkReview')
 .get(function(req,res){
 	ParkReview.findById(req.params.parkReview_id, function(err, parkReview){
 		if(err){
 			console.log("Error", err);
-
 			res.send("Error", err);
 		}
 		res.json(parkReview);
@@ -71,10 +81,9 @@ router.route('/parkReview')
 
 	ParkReview.find(function(err, parkReview){
 		if(err){
-			res.send("Error", err);
-			console.log("Error", err);
+			res.send("Error getting park review",err);
 		}
-		res.json(parkReview);
+		res.json(review);
 	});
 });
 

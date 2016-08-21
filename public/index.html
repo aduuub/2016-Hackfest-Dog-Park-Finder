@@ -411,7 +411,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		
 		$.get('http://localhost:8080/api/parks', function(parks){
+
 			console.log(parks);
+			parks.forEach(function(park){
+				console.log(park);
+				var details = parks.get(0);
+				console.log(details);
+			});
+
 			
 		});
 	}
