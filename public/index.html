@@ -226,39 +226,39 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</section>
 	<!-- /Services Section -->
 
-<!-- Gallery Section -->
-<section class="our-gallery" id="gallery">
-	<h3 class="text-center slideanim pugs">Pug Shots</h3>
-	<div class="container slideanim gallery"><img src="images/icons/bone-04.png"></div>
-	<div class="container gallery">
-		<img src="images/doggo.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/doggo2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/doggos.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/more doggos.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/pupper.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/pupper 2.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+	<!-- Gallery Section -->
+	<section class="our-gallery" id="gallery">
+		<h3 class="text-center slideanim pugs">Pug Shots</h3>
+		<div class="container slideanim gallery"><img src="images/icons/bone-04.png"></div>
+		<div class="container gallery">
+			<img src="images/doggo.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+			<img src="images/doggo2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+			<img src="images/doggos.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+			<img src="images/more doggos.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+			<img src="images/pupper.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+			<img src="images/pupper 2.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
 		<!-- <img src="images/gallery-img7.jpg" data-darkbox="images/gallery-img7-7.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
 		<img src="images/gallery-img8.jpg" data-darkbox="images/gallery-img8-8.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim"> -->
 	</div>
 </section>
-	<!-- /Gallery Section -->
-	<!-- Back To Top -->
-	<a href="#0" class="cd-top">Top</a>
-	<!-- /Back To Top -->
+<!-- /Gallery Section -->
+<!-- Back To Top -->
+<a href="#0" class="cd-top">Top</a>
+<!-- /Back To Top -->
 
-	<!-- js files -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/SmoothScroll.min.js"></script>
-	<!-- js for gallery -->
-	<script src="js/darkbox.js"></script>
-	<!-- /js for gallery -->
-	<!-- js for back to top -->
-	<script src="js/main.js"></script>
-	<!-- /js for back to top -->
-	<!-- js for nav-smooth scroll -->
-	<script>
-		$(document).ready(function(){
+<!-- js files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<!-- js for gallery -->
+<script src="js/darkbox.js"></script>
+<!-- /js for gallery -->
+<!-- js for back to top -->
+<script src="js/main.js"></script>
+<!-- /js for back to top -->
+<!-- js for nav-smooth scroll -->
+<script>
+	$(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
@@ -315,7 +315,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			console.log("THis is the map babyyyyy", map);
 			parks.forEach(function(park){
 				addMarker(park, map);
+
 			});
+		});
+
+
+		$('#roadFrontCheckbox').change(function(){
+			console.log($("#roadFrontCheckbox").is(':checked'));
+			var roadFront = $("#roadFrontCheckbox").is(':checked') === true ? "yes" : "no";
+			var offLeash = $("#offLeashCheckbox").is(':checked') === true ? "off leash" : "Prohibited";
+			console.log("road front: " + roadFront + ", offLeast: "  + offLeash);
+			filterMap(roadFront, offLeash );
+		});
+
+		$('#offLeashCheckbox').change(function(){
+			var roadFront = $("#roadFrontCheckbox").is(':checked') === true ? "yes" : "no";
+			var offLeash = $("#offLeashCheckbox").is(':checked') === true ? "off leash" : "Prohibited";
+			filterMap(roadFront, offLeash);
 		});
 	}
 
@@ -329,12 +345,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		$.get('http://localhost:8080/api/parks', function(parks){
 			console.log("THis is the map babyyyyy", map);
+
+			var roadSelected = $("#roadFrontCheckbox").is(':checked') === true;
+			var leashSelected = $("#offLeashCheckbox").is(':checked') === true;
+
+
+			var roadFront = $("#roadFrontCheckbox").is(':checked') === true ? "yes" : "no";
+			var offLeash = $("#offLeashCheckbox").is(':checked') === true ? "off leash" : "Prohibited";
+
+			console.log(roadSelected  + " , " + leashSelected);
 			parks.forEach(function(park){
 				console.log(park);
-				if(park.road_front === roadFront && park.offLeash === offLeash){
-					console.log("Adding a new marker");
+
+				// Both de- selected
+				if(!roadSelected && !leashSelected){
 					addMarker(park, map);
 				}
+
+				// Road selected and not leash selected
+				else if(roadSelected && !leashSelected){
+					if(park.road_front === "no"){
+						addMarker(park, map);
+					}
+				}
+
+				// Road not selected and leash selected
+				else if(!roadSelected && leashSelected){
+					if(park.On_Off === "Off leash"){
+						addMarker(park, map);
+					}
+				}
+
+				// Road selected and leash selected
+				else if(roadSelected && leashSelected){
+					if(park.On_Off === "Off leash" && park.road_front === "no"){
+						addMarker(park, map);
+					}
+				}
+				
 			});		
 
 		});
@@ -367,18 +415,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		});
 
 
-		$('#roadFrontCheckbox').change(function(){
-			console.log($("#roadFrontCheckbox").is(':checked'));
-			var roadFront = $("#roadFrontCheckbox").is(':checked') === true ? "yes" : "no";
-			var offLeash = $("#offLeashCheckbox").is(':checked') === true ? "off leash" : "Prohibited";
-			console.log("road front: " + roadFront + ", offLeast: "  + offLeash);
-			filterMap(roadFront, offLeash );
-		});
-
-		$('#offLeashCheckbox').change(function(){
-			return;
-			filterMap(roadFront, offLeash);
-		});
 	}
 
 
