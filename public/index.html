@@ -25,39 +25,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- js files -->
 	<script src="js/modernizr.custom.js"></script>
-	<script type="text/javascript">
-		function showValue(newValue)
-		{
-			document.getElementById("range").innerHTML=newValue;
-		}
-	</script>
-	<script>
-		function initMap() {
-			var mapDiv = document.getElementById('map');
-			var map = new google.maps.Map(mapDiv, {
-				center: {lat: -41.2865, lng: 174.7762},
-				zoom: 14
-			});
-
-			var myLatLng = {lat: -41.2865, lng: 174.7762};
-			var marker = new google.maps.Marker({
-				position: myLatLng,
-				map: map,
-				id: "markerOne",
-				title: 'Hello World!'
-			});
-
-			marker.addListener('click', function(){
-				console.log("clicked");
-				map.setZoom(18);
-
-
-
-
-			});
-		}
-
-	</script>
+	
 	<!-- /js files -->
 	<style> 
 
@@ -65,9 +33,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			width: 100%;
 			height: 600px;
 		}
+
 	</style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload='init()'>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 	<div class="navbar-wrapper">
 		<div class="container">
 			<nav class="navbar navbar-inverse navbar-static-top cl-effect-20">
@@ -140,41 +109,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!-- Query -->
 							<div class="google-font-subheading">Sniff out a park near you</div>
 							<br> </br>	
-						<input type="checkbox" name="vehicle" value="Bike">	No road front <br>
-						<input type="checkbox" name="vehicle" value="Bike"> Off leash <br>
-						<br><br>
+							<input type="checkbox" name="vehicle" value="Bike">	No road front <br>
+							<input type="checkbox" name="vehicle" value="Bike"> Off leash <br>
+							<br><br>
 
-					</div> <!-- Closing query div -->
+						</div> <!-- Closing query div -->
 
-					<!-- End Query -->
-					<!-- Details -->
+						<!-- End Query -->
+						<!-- Details -->
 
-					<div class="results">
+						<div class="results">
 
-						<br>
-						<p>Name</p>
-						<p>Suburb</p>
-						<p>Restrictions</p>
-						<p>Road Side</p>
-						<p></p>
+							<br>
+							<p>Name</p>
+							<p>Suburb</p>
+							<p>Restrictions</p>
+							<p>Road Side</p>
+							<p></p>
 
-					</div> <!-- Closing query -->
+						</div> <!-- Closing query -->
 
-				</div> <!-- Closing column div -->
-			</div> <!-- Closing Column -->
-			<div class="col-lg-6 col-md-6 col-sm-6">
+					</div> <!-- Closing column div -->
+				</div> <!-- Closing Column -->
+				<div class="col-lg-6 col-md-6 col-sm-6">
 
-				<div id="map">
+					<div id="map">
 
-				</div> <!-- Closing the map -->
+					</div> <!-- Closing the map -->
 
-			</div> <!-- Closing the Column -->
+				</div> <!-- Closing the Column -->
 
-		</div> <!-- Closing the row -->
-		<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB79P4p04uaJVvmGHo4MaLbprB-2s5uj0E&callback=initMap">
-	</script>
-</div>
+			</div> <!-- Closing the row -->
+			<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB79P4p04uaJVvmGHo4MaLbprB-2s5uj0E">
+		</script>
+	</div>
 </section>
 
 
@@ -194,9 +163,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="slider-div">
 
 						<!-- Query -->
-						<h4>Previous Bark Backs</h4>
-						<br><br>
-
+						<div class="google-font-subheading">Previous Bark Back</div>
 
 						<ul class="bark-backs">
 							<li>
@@ -223,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					<div class="slider-div">
 
-						<br> <br>
+						<div class="google-font-subheading">Have your say</div>
 
 						<p> Size of your dog</p>
 						<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
@@ -418,6 +385,48 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			}
 		});
 	});
+</script>
+<script type="text/javascript">
+	function showValue(newValue)
+	{
+		document.getElementById("range").innerHTML=newValue;
+	}
+</script>
+<script>
+
+	window.addEventListener("DOMContentLoaded", function(){
+		initMap()		
+	});
+
+	function initMap() {
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: -41.2865, lng: 174.7762},
+			zoom: 14
+		});
+
+		
+		$.get('http://localhost:8080/api/parks', function(parks){
+			console.log(parks);
+			
+		});
+	}
+
+	function addMarker(lat, long){
+		var myLatLng = {lat: lat, lng: long};
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			id: "markerOne",
+			title: 'Hello World!'
+		});
+
+		marker.addListener('click', function(){
+			console.log("clicked");
+			map.setZoom(18);
+		});
+	}
+
 </script>
 <!-- /js for slide animations -->
 <!-- /js files -->

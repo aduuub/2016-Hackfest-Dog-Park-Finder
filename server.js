@@ -56,7 +56,20 @@ router.route('/parkReview')
 
 router.route('/parkReview/:parkReview_id')
 .get(function(req,res){
-	ParkReview.findById(req.params.parkReview_id, function(err, parkReivew){
+	ParkReview.findById(req.params.parkReview_id, function(err, parkReview){
+		if(err){
+			console.log("Error", err);
+
+			res.send("Error", err);
+		}
+		res.json(parkReview);
+	});
+});
+
+router.route('/parkReview')
+.get(function(req,res){
+
+	ParkReview.find(function(err, parkReview){
 		if(err){
 			res.send("Error", err);
 			console.log("Error", err);
