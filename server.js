@@ -39,13 +39,14 @@ router.get('/', function(req, res) {
 //method to create a new park review
 router.route('/parkReview')
 .post(function(req,res){
-	console.log("Creating park review", req.body.name);
 	var parkReview  = new ParkReview();
 	parkReview.name = req.body.name;
-	console.log(parkReview);
+	parkReview.size = req.body.size;
+	parkReview.rating = req.body.rating;
+	parkReview.saftey = req.body.saftey;
+	parkReview.description = req.body.description;
 	parkReview.save().then(function(newReview){
-		console.log(newReview);
-		res.json({message: 'Park Review created!'});
+		res.json(newReview);
 	}).then(null, function(err){
 		res.send("Error creating park review", err);
 	});
