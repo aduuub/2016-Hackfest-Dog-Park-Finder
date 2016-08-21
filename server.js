@@ -43,9 +43,9 @@ router.route('/parkReview')
 .post(function(req,res){
 	var parkReview  = new ParkReview();
 	parkReview.name = req.body.name;
-	parkReview.size = req.body.size;
+	parkReview.dogSize = req.body.dogSize;
 	parkReview.rating = req.body.rating;
-	parkReview.saftey = req.body.saftey;
+	parkReview.safety = req.body.safety;
 	parkReview.description = req.body.description;
 	parkReview.save().then(function(newReview){
 		res.json(newReview);

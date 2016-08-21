@@ -199,26 +199,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="google-font-subheading">Have your say</div>
 
 							<p> Size of your dog</p>
-							<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-							<span id="range">0</span>
+							<input type="range" min="1" max="3" value="0" step="1" width="50" id="dog-size"/>
 
 							<br><br>
 
 							<p>Saftey for your dog</p>
-							<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-							<span id="range">0</span>
+							<input type="range" min="1" max="3" value="0" step="1" width="50" id="safety"/>
 
 							<br><br>
 
 							<p>Star Rating</p>
-							<input type="range" min="0" max="5" value="0" step="0.5" onchange="showValue(this.value)" width="50" />
-							<span id="range">0</span>
+							<input type="range" min="1" max="5" value="0" step="1" width="50" id="overall-rating"/>
 
 							<br><br><br>
 
 							<p>Comment</p><br>
 
 							<input type="text" name="comment" placeholder="Placeholder text" class="comment-box" size="38" id="comment-box"><br>
+							<button type="button" id="submit-review">Submit Review!</button>
 
 						</div> <!-- CLOSING SLIDER DIV -->
 					</div> <!-- CLOSING COLUMN DIV -->
