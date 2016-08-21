@@ -34,21 +34,26 @@ jQuery(document).ready(function($){
 
 function postReview(){
 	var dogSize = $("#dog-size").val();
-	console.log(dogSize);
 	var safety = $("#safety").val();
-	console.log(safety);
 	var overallRating = $("#overall-rating").val();
-	console.log(overallRating);
 	var comment = $("#comment-box").val();
-	console.log(comment);
 
 	$.post("http://localhost:8080/api/parkReview", {name:"name",dogSize: dogSize, 
-		rating: overallRating, safety: safety, description: comment});
+		rating: overallRating, safety: safety, description: comment})
+	.done(function(){
+		$("#comment-box").val("");
+		getReviews();
+	});
 }
 
 function getReviews(){
 	$.get("http://localhost:8080/api/parkReview", function(data){
-		console.log(data);
+		var dataCopy = data.slice(data.length - 5, data.length);
+		$("#review1").html(data[data.length-1].description);
+		$("#review2").html(data[data.length-2].description);
+		$("#review3").html(data[data.length-3].description);
+		$("#review4").html(data[data.length-4].description);
+		$("#review5").html(data[data.length-5].description);
 	});
 
 
