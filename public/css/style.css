@@ -367,7 +367,11 @@ section.our-services p.text-center{
 	font-family: 'Quicksand', sans-serif;
 	text-align: center;
 	font-size: 22px;
+<<<<<<< HEAD
+	padding-bottom: 30px;	
+=======
 	padding-bottom: 25px;
+>>>>>>> 624649eb2577c6a7e234079c356748fda1fd6923
 }
 
 #features .ac a{
