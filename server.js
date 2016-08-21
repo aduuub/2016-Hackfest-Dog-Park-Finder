@@ -15,6 +15,8 @@ mongoose.connect('mongodb://woof_pack:woofpack@ds147995.mlab.com:47995/walk_in_t
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(express.static('public'));
+
 var port = process.env.PORT || 8080;        // set our port
 
 // ROUTES FOR OUR API
@@ -31,9 +33,9 @@ router.use(function(req, res, next) {
 
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
-});
+// router.get('/', function(req, res) {
+//     // res.json({ message: 'hooray! welcome to our api!' });   
+// });
 
 //method to create a new park review
 router.route('/parkReview')
