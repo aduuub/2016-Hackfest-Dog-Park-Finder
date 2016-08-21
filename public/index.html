@@ -25,7 +25,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- js files -->
 	<script src="js/modernizr.custom.js"></script>
-	
+
 	<!-- /js files -->
 	<style>
 
@@ -231,17 +231,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!-- Gallery Section -->
 <section class="our-gallery" id="gallery">
-	<h3 class="text-center slideanim">Gallery</h3>
-	<p class="text-center slideanim">Photos of the beautiful parks Wellington has to offer.</p>
-	<div class="container">
-		<img src="images/gallery-img1.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img3.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img4.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img5.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img6.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img7.jpg" data-darkbox="images/gallery-img7-7.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
-		<img src="images/gallery-img8.jpg" data-darkbox="images/gallery-img8-8.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+	<h3 class="text-center slideanim pugs">Pug Shots</h3>
+	<div class="container slideanim gallery"><img src="images/icons/bone-04.png"></div>
+	<div class="container gallery">
+		<img src="images/doggo.jpg" data-darkbox="images/gallery-img1-1.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/doggo2.jpg" data-darkbox="images/gallery-img2-2.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/doggos.jpg" data-darkbox="images/gallery-img3-3.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/more doggos.jpg" data-darkbox="images/gallery-img4-4.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/pupper.jpg" data-darkbox="images/gallery-img5-5.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/pupper 2.jpg" data-darkbox="images/gallery-img6-6.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<!-- <img src="images/gallery-img7.jpg" data-darkbox="images/gallery-img7-7.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim">
+		<img src="images/gallery-img8.jpg" data-darkbox="images/gallery-img8-8.jpg" data-darkbox-description="<b>Lorem Ipsum</b><br>Lorem ipsum dolor sit amet" class="img-responsive slideanim"> -->
 	</div>
 </section>
 <!-- /Gallery Section -->
@@ -399,7 +399,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script>
 
 	window.addEventListener("DOMContentLoaded", function(){
-		initMap()		
+		initMap()
 	});
 
 	function initMap() {
@@ -409,7 +409,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			zoom: 14
 		});
 
-		
+
 		$.get('http://localhost:8080/api/parks', function(parks){
 
 			console.log(parks);
@@ -419,7 +419,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				console.log(details);
 			});
 
-			
+
 		});
 	}
 
