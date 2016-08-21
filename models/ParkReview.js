@@ -5,7 +5,7 @@ var Schema       = mongoose.Schema;
 var ParkReviewSchema  = new Schema({
  id: Number,
  name: String,
- dogSize: String, 
+ dogSize: Number, 
  rating: Number,
  safety: Number,
  description: String

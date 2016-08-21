@@ -49,11 +49,11 @@ function postReview(){
 function getReviews(){
 	$.get("http://localhost:8080/api/parkReview", function(data){
 		var dataCopy = data.slice(data.length - 5, data.length);
-		$("#review1").html(data[data.length-1].description);
-		$("#review2").html(data[data.length-2].description);
-		$("#review3").html(data[data.length-3].description);
-		$("#review4").html(data[data.length-4].description);
-		$("#review5").html(data[data.length-5].description);
+		$("#review1").html(data[data.length-1].description + "<br><b>User Rating: " + data[data.length-1].rating.toString()+ "</b>");
+		$("#review2").html(data[data.length-2].description+ "<br><b>User Rating: " + data[data.length-2].rating.toString()+ "</b>");
+		$("#review3").html(data[data.length-3].description + "<br><b>User Rating: " + data[data.length-3].rating.toString() + "</b>");
+		$("#review4").html(data[data.length-4].description + "<br><b>User Rating: " + data[data.length-4].rating.toString() + "</b>");
+		$("#review5").html(data[data.length-5].description+ "<br><b>User Rating: " + data[data.length-5].rating.toString() + "</b>");
 	});
 
 
