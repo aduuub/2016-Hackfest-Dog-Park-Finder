@@ -113,8 +113,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="query">
 								<!-- Query -->
 								<div class="google-font-subheading">Sniff out a park near you</div>
-								<input type="checkbox" name="vehicle" value="Bike">	No road front <br>
-								<input type="checkbox" name="vehicle" value="Bike"> Off leash <br>
+								<input type="checkbox" id="roadFrontCheckbox" value="roadFront">	No road front <br>
+								<input type="checkbox" id="offLeashCheckbox" value="offLeash"> Off leash <br>
 								<br><br>
 
 							</div> <!-- Closing query div -->
@@ -126,7 +126,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 								<br>
 
-								 <p><span id="parkName"> Name</span> </p>
+								<p><span id="parkName"> Name</span> </p>
 								<p><span id="parkSuburb">Suburb</span> </p>
 								<br>
 
@@ -420,7 +420,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		});
 	}
 
+	function filterMap(roadFront, offLeash) {
+		console.log("filtering map")
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: -41.2865, lng: 174.7762},
+			zoom: 14
+		});
+
+		$.get('http://localhost:8080/api/parks', function(parks){
+			console.log("THis is the map babyyyyy", map);
+			parks.forEach(function(park){
+				console.log(park);
+				if(park.road_front === roadFront && park.offLeash === offLeash){
+					console.log("Adding a new marker");
+					addMarker(park, map);
+				}
+			});		
+
+		});
+	}
+
 	function addMarker(park, map){
+
 		console.log(map);
 		var myLatLng = {lat: park.lat, lng: park.long};
 		var marker = new google.maps.Marker({
@@ -438,15 +460,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			map.panTo(marker.position);
 			map.setZoom(18);
 
-			console.log(marker.title);
-
 			$("#parkName").text(marker.title);
 			$("#parkSuburb").text(marker.suburb);
 			$("#parkRestrictions").text(marker.details);
 			$("#parkRoadSide").text(marker.road_front);
 
 		});
+
+
+		$('#roadFrontCheckbox').change(function(){
+			console.log($("#roadFrontCheckbox").is(':checked'));
+			var roadFront = $("#roadFrontCheckbox").is(':checked') === true ? "yes" : "no";
+			var offLeash = $("#offLeashCheckbox").is(':checked') === true ? "off leash" : "Prohibited";
+			console.log("road front: " + roadFront + ", offLeast: "  + offLeash);
+			filterMap(roadFront, offLeash );
+		});
+
+		$('#offLeashCheckbox').change(function(){
+			return;
+			filterMap(roadFront, offLeash);
+		});
 	}
+
+
+
 
 </script>
 <!-- /js for slide animations -->
