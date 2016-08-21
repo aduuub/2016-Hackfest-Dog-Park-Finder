@@ -67,23 +67,11 @@ router.route('/parks')
 
 router.route('/parkReview')
 .get(function(req,res){
-	ParkReview.findById(req.params.parkReview_id, function(err, parkReview){
-		if(err){
-			console.log("Error", err);
-			res.send("Error", err);
-		}
-		res.json(parkReview);
-	});
-});
-
-router.route('/parkReview')
-.get(function(req,res){
-
-	ParkReview.find(function(err, parkReview){
+	ParkReview.find(function(err, success){
 		if(err){
 			res.send("Error getting park review",err);
 		}
-		res.json(review);
+		res.json(success);
 	});
 });
 

@@ -1,3 +1,5 @@
+
+
 jQuery(document).ready(function($){
 	// browser window scroll (in pixels) after which the "back to top" link is shown
 	var offset = 300,
@@ -26,6 +28,7 @@ jQuery(document).ready(function($){
 	});
 
 	$("#submit-review").click(postReview);
+	getReviews();
 
 });
 
@@ -41,6 +44,16 @@ function postReview(){
 
 	$.post("http://localhost:8080/api/parkReview", {name:"name",dogSize: dogSize, 
 		rating: overallRating, safety: safety, description: comment});
+}
+
+function getReviews(){
+	$.get("http://localhost:8080/api/parkReview", function(data){
+		console.log(data);
+	});
+
+
+
+
 
 
 }
